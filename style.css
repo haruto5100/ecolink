@@ -1,0 +1,68 @@
+/* style.css */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #2D5A27;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(45, 90, 39, 0.2);
+}
+
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ナビゲーションの下線アニメーション */
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2D5A27;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* SNSリンクの装飾 */
+.social-link {
+    position: relative;
+    padding: 4px 0;
+}
+.social-link:hover {
+    transform: scale(1.05);
+}
+
+/* 強みカードのホバー効果 */
+.feature-card {
+    transition: all 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: #2D5A27;
+}

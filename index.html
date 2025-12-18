@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLink Solutions | 持続可能な未来を創る</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer nav-btn" data-target="home">
+                <div class="w-10 h-10 bg-[#2D5A27] rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707-.707"></path></svg>
+                </div>
+                <span class="text-xl font-bold tracking-wider text-[#2D5A27]">EcoLink</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <button class="nav-link text-gray-600 hover:text-[#2D5A27] nav-btn" data-target="home">ホーム</button>
+                <button class="nav-link text-gray-600 hover:text-[#2D5A27] nav-btn" data-target="about">サービス概要</button>
+                <button class="nav-link text-gray-600 hover:text-[#2D5A27] nav-btn" data-target="contact">お問い合わせ</button>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8 text-xl">
+        <button class="nav-btn text-gray-800" data-target="home">ホーム</button>
+        <button class="nav-btn text-gray-800" data-target="about">サービス概要</button>
+        <button class="nav-btn text-gray-800" data-target="contact">お問い合わせ</button>
+        <button id="close-menu" class="mt-8 text-gray-400">閉じる</button>
+    </div>
+
+    <main class="flex-grow">
+        
+        <section id="home" class="page-content active">
+            <div class="relative bg-gray-50 py-20 lg:py-32 overflow-hidden">
+                <div class="container mx-auto px-6 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2">
+                        <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                            自然と共生する、<br><span class="text-[#2D5A27]">新しいビジネスの形。</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0">
+                            テクノロジーと環境保護を掛け合わせ、持続可能な社会を実現するためのプロフェッショナルなコンサルティングを提供します。
+                        </p>
+                        <button class="btn-primary px-10 py-4 rounded-full font-bold nav-btn" data-target="about">詳しくみる</button>
+                    </div>
+                    <div class="hidden lg:block lg:w-1/2 mt-12 lg:mt-0">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" alt="Nature" class="rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-20 container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">私たちの強み</h2>
+                    <div class="w-16 h-1 bg-[#2D5A27] mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="feature-card p-8 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-3">迅速な導入</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">独自のフレームワークにより、貴社の環境対応をスピーディに最適化します。</p>
+                    </div>
+                    <div class="feature-card p-8 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-3">確かな信頼</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">業界トップクラスの専門家が、法的・技術的な側面から徹底サポート。</p>
+                    </div>
+                    <div class="feature-card p-8 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-3">24/7 サポート</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">導入後も安心して運用いただけるよう、専任のチームが常駐サポートを提供。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-content">
+            <div class="container mx-auto px-6 py-20">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#2D5A27]">サービス概要</h2>
+                    <div class="prose prose-lg text-gray-600 max-w-none">
+                        <p class="mb-10 text-xl leading-relaxed">
+                            EcoLink Solutionsは、2025年に設立された次世代型コンサルティングファームです。「経済成長」と「環境負荷の低減」の両立を最新のテクノロジーで支援します。
+                        </p>
+                        
+                        <div class="relative h-96 mb-16 overflow-hidden rounded-3xl shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" alt="Office" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-12 mb-16">
+                            <div>
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-[#2D5A27] pl-4">私たちのビジョン</h4>
+                                <p class="text-gray-600">全ての企業が自然の一部として機能し、事業活動が地球をより豊かにする「リジェネラティブ（再生型）」な未来を目指します。</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-[#2D5A27] pl-4">提供する価値</h4>
+                                <p class="text-gray-600">データに基づいた透明性の高いレポーティングと、実効性のあるソリューションにより、ステークホルダーからの信頼を構築します。</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-6">主な事業内容</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-[#2D5A27] mr-3 font-bold">●</span>
+                                    <span>カーボンニュートラル戦略の策定</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-[#2D5A27] mr-3 font-bold">●</span>
+                                    <span>サプライチェーンの環境負荷モニタリング</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-[#2D5A27] mr-3 font-bold">●</span>
+                                    <span>再生可能エネルギーへの転換コンサルティング</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-content">
+            <div class="container mx-auto px-6 py-20 max-w-xl">
+                <h2 class="text-3xl font-bold mb-8 text-center text-[#2D5A27]">お問い合わせ</h2>
+                <form id="contact-form" class="space-y-6 bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">お名前</label>
+                        <input type="text" id="name" placeholder="山田 太郎" class="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#2D5A27]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">メールアドレス</label>
+                        <input type="email" id="email" placeholder="example@ecolink.com" class="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#2D5A27]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">メッセージ</label>
+                        <textarea id="message" rows="4" placeholder="ご相談内容を入力してください" class="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-[#2D5A27]"></textarea>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold text-lg">送信する</button>
+                </form>
+                <div id="success-msg" class="hidden text-center p-12 bg-green-50 rounded-3xl mt-6 border border-green-100">
+                    <h3 class="text-xl font-bold text-[#2D5A27] mb-2">送信が完了しました</h3>
+                    <p class="text-gray-600 mb-6">内容を確認し、3営業日以内にご連絡いたします。</p>
+                    <button class="nav-btn text-[#2D5A27] underline font-medium" data-target="home">ホームに戻る</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-12">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <div class="flex items-center space-x-2 mb-8">
+                <div class="w-8 h-8 bg-[#2D5A27] rounded flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707-.707"></path></svg>
+                </div>
+                <span class="text-xl font-bold text-[#2D5A27]">EcoLink</span>
+            </div>
+
+            <div class="flex space-x-8 mb-8">
+                <a href="#" class="social-link text-gray-400 hover:text-[#2D5A27] transition-colors">
+                    <span class="text-sm font-bold tracking-widest">X (TWITTER)</span>
+                </a>
+                <a href="#" class="social-link text-gray-400 hover:text-[#2D5A27] transition-colors">
+                    <span class="text-sm font-bold tracking-widest">INSTAGRAM</span>
+                </a>
+                <a href="#" class="social-link text-gray-400 hover:text-[#2D5A27] transition-colors">
+                    <span class="text-sm font-bold tracking-widest">LINKEDIN</span>
+                </a>
+            </div>
+
+            <div class="text-xs text-gray-400">
+                &copy; 2025 EcoLink Solutions Inc. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
